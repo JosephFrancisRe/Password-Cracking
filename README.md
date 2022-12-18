@@ -1,4 +1,7 @@
 # Password-Cracking
+Language: Python
+Lines of Code: 161
+
 <b>Purpose:</b> The purpose of this project was to crack a salted hash password. The hash function was created using sha256.
 In addition to creating a python file that uses a dictionary attack to identify a password crack match, the project's
 Part 2 is meant to explore how a requests library can be used to achieve the same end by cracking through a web site's
