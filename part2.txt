@@ -1,0 +1,49 @@
+                             PART 2 - Dictionary Attack over a Simple Web Application
+
+**************************************************************************************************************
+
+                                          Part 2 Description of Attack
+
+The purpose of this part of the project is quite similar to Part 1. The major difference is rather than running
+the dictionary attack on my local machine using either the computing power of my local CPU or GPU, I must utilize
+the POST request functionality innate to HTML. Such an HTML form submission will be substantially slower.
+
+Nonetheless, the steps to conduct the attack are more or less identical. In fact, I will use the same word list as
+I used in Part 1.
+
+                                           --------------------------
+
+                   Ways the web app developer could prevent or mitigate such an attack
+
+1) Lockout IP addresses or accounts that are making a rapid succession of login attempts
+2) Limit the number of incorrect password attempts per username and IP address on an hourly basis
+3) Require a captcha after a predetermined number of unsuccessful login attempts
+
+                                           --------------------------
+
+                                            Steps to Complete Part 2
+
+1) Change your directory in the command line to the base folder
+2) Type into the command line the following prompt: python3 webapp.py
+3) Open another command line terminal and change its directory to the base folder.
+4) Type into the second command line the following prompt: python3 pwcrack_online.py
+
+                                           --------------------------
+
+                                             Results of Part 2 Test
+
+Password was successfully cracked.
+Password was determined to be "adminpassword"
+
+                                           --------------------------
+
+                                            Analysis of Part 2 Test
+
+Total Number of Guesses: 7,850,907
+Total Elapsed Time:      27,154.292172908783 seconds (approximately 7 hours and 32.6 minutes)
+Guesses Per Second:      289.1221376719468 guesses per second
+
+                                           --------------------------
+
+For proof of the above results, please check the part2 screenshot in the screenshots folder.
+The file is called "pwcrack_online screenshot.png"

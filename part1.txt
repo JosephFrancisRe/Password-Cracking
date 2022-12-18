@@ -1,0 +1,61 @@
+                                   PART 1 - Dictionary Attack on Local Machine
+
+**************************************************************************************************************
+
+                                          Part 1 Description of Attack
+
+The purposes of this part is to create a python file that allows us to crack simple salted hash passwords. The
+provided password was given using sha256 encoding and was salted with a utf-8 encoding. The salt precedes the
+hash function, so the bulk of the work will be attempting to identify a plain text password that is equivalent
+to the encrypted password's substring that comes after the "$" symbol. Typically the "$" symbol indicates the
+conclusion of the salted component of the salted hash password.
+
+One way to solve this issue would be to implement a brute force algorithm. Such an algorithm would literally
+iterate over all possible combinations of ASCII letters to see if one of those combinations would ultimately
+result in hashed function equivalent to the provided password. The brute force algorithm would be exceedingly
+inefficient and, if randomized, may have wide variances in the efficacy on a trial by trial basis. Nonetheless,
+such an approach would guarantee success in cracking the password, although, it would take an extremely long
+period of time.
+
+In order to solve this inefficiency problem, I've elected to employ a much faster approach than Brute Force.
+The method I will use is called a Dicitonary Attack and it leverages the fact that most passwords are not
+entirely random in their construction. Most passwords that exist are actually prone to mimic real words and
+are often times a combination of real words. To conduct a Dictionary Attack I need a words list file that
+contains common words and combinations of words that often appear in passwords. Luckily such lists are
+abundantly available on the internet. I've chosen to use a fairly common wordslist that is referenced in the
+README file. Unfortuntaely, it was too large in size to include in this github repository.
+
+By taking each term in the wordslist and applying sha256 encoding to them, I can check the hash values against
+the provided password. Once a match is identified, the plain text password can be printed. Additionally, the
+algorithm will handle minor tasks like calculating the overall run time and attempted guesses to give us
+insight into how quickly this dictionary attack worked.
+
+Below are the steps and results of how I was able to find out the password was adminpassword in under 10 seconds.
+
+                                           --------------------------
+
+                                            Steps to Complete Part 1
+
+1) Change your directory in the command line to the base folder
+2) Type into the command line the following prompt: python3 pwcrack.py
+
+                                           --------------------------
+
+                                             Results of Part 1 Test
+
+Password was successfully cracked.
+Password was determined to be "adminpassword"
+The password was associated with the hash of 18821d89de11ab18488fdc0a01f1ddf4f290e198b0f80cd4974fc031dc2615a3.
+
+                                           --------------------------
+
+                                            Analysis of Part 1 Test
+
+Total Number of Guesses: 7,850,907
+Total Elapsed Time:      9.641387939453125 seconds
+Guesses Per Second:      814,292.2003867958 guesses per second
+
+                                           --------------------------
+
+For proof of the above results, please check the part1 screenshot in the screenshots folder.
+The file is called "pwcrack screenshot.png"
