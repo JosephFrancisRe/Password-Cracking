@@ -16,7 +16,7 @@ application.
 				and part2.txt.
 
 	templates folder	Contains index.html which is an extremely basic form with a post method to
-				facilitate Part 2 of the assignment.
+				facilitate Part 2 of the project.
 
 	part1.txt		Write up with information specific to the Part 1 submission.
 
