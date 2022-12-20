@@ -10,7 +10,7 @@ form.
 <b>Result:</b> The solution shows that cracking a salted hash function is much faster on a system than through a web
 application.
 
-<b>Description</b> of other files:
+<b>Description of other files:</b>
 	screenshots folder	Contains a screenshot for both Parts 1 and 2 of the project. Each screenshot
 				serves as proof of the performance results that are outlined in both part1.txt
 				and part2.txt.
